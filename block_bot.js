@@ -3,7 +3,7 @@ var Twit = require('twit')
 
 //DEFINES
 var NUM_HISTORY=5;
-
+var USERNAME=; //enter your twitter @username
 
 var followers_list= [];
 var T = new Twit({
@@ -13,7 +13,7 @@ var T = new Twit({
   "access_token_secret": "..",
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 })
-T.get('followers/ids', { screen_name: '@farrelldobbs' , count: NUM_HISTORY},  function (err, data, response) {
+T.get('followers/ids', { screen_name: USERNAME , count: NUM_HISTORY},  function (err, data, response) {
   console.log(data)
 
 var i = 0; 
